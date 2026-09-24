@@ -22,6 +22,9 @@ const translations = {
     "hero.suggest": "Propón un deporte",
     "hero.vote": "Votación · 5 de octubre",
 
+    "hero.photoAlt":
+      "Balam practicando deporte",
+
 
     "about.label": "Sobre mí",
 
@@ -218,6 +221,9 @@ const translations = {
 
     "hero.vote":
       "Vote · October 5",
+
+    "hero.photoAlt":
+      "Balam practicing sport",
 
 
     "about.label":
@@ -425,6 +431,9 @@ const translations = {
     "hero.vote":
       "Vote · 5 octobre",
 
+    "hero.photoAlt":
+      "Balam pratiquant du sport",
+
 
     "about.label":
       "À propos",
@@ -594,6 +603,25 @@ const translations = {
 
 
 /* =========================
+   TÍTULO DE LA PÁGINA
+========================= */
+
+const pageTitles = {
+
+  es:
+    "Balam | Candidato a Encargado de Deportes",
+
+  en:
+    "Balam | Candidate for Sports Representative",
+
+  fr:
+    "Balam | Candidat au poste de responsable des sports"
+
+};
+
+
+
+/* =========================
    CAMBIO DE IDIOMA
 ========================= */
 
@@ -608,8 +636,17 @@ function setLanguage(lang) {
   }
 
 
+  /* idioma del documento */
+
   document.documentElement.lang = lang;
 
+
+  /* título de la pestaña */
+
+  document.title = pageTitles[lang];
+
+
+  /* textos normales */
 
   document
     .querySelectorAll("[data-i18n]")
@@ -628,6 +665,27 @@ function setLanguage(lang) {
     });
 
 
+  /* atributos ALT */
+
+  document
+    .querySelectorAll("[data-i18n-alt]")
+    .forEach(element => {
+
+      const key =
+        element.dataset.i18nAlt;
+
+      if (translations[lang][key]) {
+
+        element.alt =
+          translations[lang][key];
+
+      }
+
+    });
+
+
+  /* botón activo */
+
   languageButtons.forEach(button => {
 
     button.classList.toggle(
@@ -638,6 +696,8 @@ function setLanguage(lang) {
   });
 
 
+  /* guardar idioma */
+
   localStorage.setItem(
     "preferredLanguage",
     lang
@@ -647,7 +707,9 @@ function setLanguage(lang) {
 
 
 
-/* BOTONES */
+/* =========================
+   BOTONES
+========================= */
 
 languageButtons.forEach(button => {
 
@@ -663,7 +725,9 @@ languageButtons.forEach(button => {
 
 
 
-/* IDIOMA GUARDADO */
+/* =========================
+   IDIOMA GUARDADO
+========================= */
 
 const savedLanguage =
   localStorage.getItem("preferredLanguage") || "es";
