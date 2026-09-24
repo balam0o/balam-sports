@@ -96,8 +96,13 @@ const translations = {
     "vote.date": "5 de octubre",
     "vote.role": "Elección del Comité de Residentes",
 
-    "footer.role":
-      "Candidato a encargado de deportes · 2026–2027"
+"footer.role":
+  "Candidato a encargado de deportes · 2026–2027",
+
+"footer.home": "Inicio",
+"footer.about": "Sobre mí",
+"footer.proposals": "Propuestas",
+"footer.participate": "Participa"
   },
 
 
@@ -197,8 +202,13 @@ const translations = {
     "vote.date": "October 5",
     "vote.role": "Residents' Committee Election",
 
-    "footer.role":
-      "Candidate for Sports Representative · 2026–2027"
+"footer.role":
+  "Candidate for Sports Representative · 2026–2027",
+
+"footer.home": "Home",
+"footer.about": "About me",
+"footer.proposals": "Proposals",
+"footer.participate": "Participate"
   }
 
 };
