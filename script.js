@@ -622,6 +622,25 @@ const pageTitles = {
 
 
 /* =========================
+   FORMULARIOS POR IDIOMA
+========================= */
+
+const formLinks = {
+
+  es:
+    "https://forms.gle/n9zzUnxtHZYQkki7A",
+
+  en:
+    "https://forms.gle/zn7u9SvMcNNc5JYc7",
+
+  fr:
+    "https://forms.gle/3mJuz6FtV52nvCbG8"
+
+};
+
+
+
+/* =========================
    CAMBIO DE IDIOMA
 ========================= */
 
@@ -644,6 +663,22 @@ function setLanguage(lang) {
   /* título de la pestaña */
 
   document.title = pageTitles[lang];
+
+
+  /* formulario correspondiente */
+
+  const activityFormLink =
+    document.getElementById("activity-form-link");
+
+  if (
+    activityFormLink &&
+    formLinks[lang]
+  ) {
+
+    activityFormLink.href =
+      formLinks[lang];
+
+  }
 
 
   /* textos normales */
