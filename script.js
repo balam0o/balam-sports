@@ -628,13 +628,13 @@ const pageTitles = {
 const formLinks = {
 
   es:
-    "https://forms.gle/n9zzUnxtHZYQkki7A",
+    "https://forms.gle/nQzo3f3U6XrniCQ68",
 
   en:
-    "https://forms.gle/zn7u9SvMcNNc5JYc7",
+    "https://forms.gle/mQUZQ5rNX8n2Jz4EA",
 
   fr:
-    "https://forms.gle/3mJuz6FtV52nvCbG8"
+    "https://forms.gle/1wbi4GqbdWi6RDzo7"
 
 };
 
